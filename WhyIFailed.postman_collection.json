@@ -1,0 +1,119 @@
+{
+  "info": {
+    "_postman_id": "bcaf65e2-7fdf-4abc-882f-d8d561548c45",
+    "name": "WhyIFailed",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "36485981",
+    "_collection_link": "https://first-team-8035.postman.co/workspace/first-work-space~3953aa63-3490-44a2-9f25-81a118528346/collection/36485981-bcaf65e2-7fdf-4abc-882f-d8d561548c45?action=share&source=collection_link&creator=36485981"
+  },
+  "item": [
+    {
+      "name": "create post",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"HEADING\": \"Startup Collapse in 6 Months\",\n    \"BODY\": \"My startup idea sounded perfect in my head, and I convinced two friends to join me. But we launched too soon without validating the market. Users didn’t connect with our product, and we ran out of money. We had to shut down. Painful, but now I value feedback more than assumptions.\",\n    \"TAGS\": [\"Professional\", \"Startup\", \"Business\"],\n    \"POST_ID\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base}}api/post/create",
+          "host": ["{{base}}api"],
+          "path": ["post", "create"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "list post",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base}}api/post/list",
+          "host": ["{{base}}api"],
+          "path": ["post", "list"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "single post",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base}}api/post/1",
+          "host": ["{{base}}api"],
+          "path": ["post", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "like post",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "{{base}}api/post/like/1",
+          "host": ["{{base}}api"],
+          "path": ["post", "like", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update post",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"POST_ID\": 1,\n    \"HEADING\": \"updated Startup Collapse in 6 Months\",\n    \"BODY\": \"My startup idea sounded perfect in my head, and I convinced two friends to join me. But we launched too soon without validating the market. Users didn’t connect with our product, and we ran out of money. We had to shut down. Painful, but now I value feedback more than assumptions.\",\n    \"TAGS\": [\n        \"Professional\",\n        \"Startup\",\n        \"Business\"\n    ],\n    \"IMAGE\": \"\",\n    \"LIKES\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base}}api/post/update/1",
+          "host": ["{{base}}api"],
+          "path": ["post", "update", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete post",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base}}api/post/delete/1",
+          "host": ["{{base}}api"],
+          "path": ["post", "delete", "1"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
